@@ -1,31 +1,13 @@
-//상속
+let str = `
+010-1234-1234
+thesecon@gmail.com
+https://www.omdbapi.com/?apikey=7035c60c&s=frozen
+The quick brown fox jumps over the lazy dog.
+abbcccdddd
+http://localhost:1234
+동해물과_백두산이 마르고 닳도록
+`;
 
-class Vehicle {
-    constructor(name, wheel) {
-        this.name = name;
-        this.wheel = wheel;
-    }
-}
-const myVehicle = new Vehicle("운송수단", 2);
-console.log(myVehicle);
-
-class Bicycle extends Vehicle {
-    constructor(name, wheel) {
-        super(name, wheel);
-    }
-}
-const myBycycle = new Bicycle("삼천리", 2);
-const daughtersBicycle = new Bicycle("세발", 3);
-console.log(myBycycle);
-console.log(daughtersBicycle);
-
-class Car extends Vehicle {
-    constructor(name, wheel, license) {
-        super(name, wheel);
-        this.license = license;
-    }
-}
-const myCar = new Car("벤츠", 4, true);
-const daughtersCar = new Car("포르쉐", 4, false);
-console.log(myCar);
-console.log(daughtersCar);
+console.log(
+    str.match(/\bf\w{1,}\b/g)
+);
